@@ -267,12 +267,12 @@ typedef NS_ENUM(NSInteger, RMActionControllerAnimationStyle) {
         
         UIVisualEffectView *container = [[UIVisualEffectView alloc] initWithEffect:blur];
         [container.contentView addSubview:vibrancyView];
+               
+        if(self.disableBlurEffectsForContentView) {
+            [container.contentView addSubview:self.contentView];
+        }
         
         self.topContainer = container;
-        
-        if(self.disableBlurEffectsForContentView) {
-            [self.topContainer addSubview:self.contentView];
-        }
     }
     
     //Botoom container
