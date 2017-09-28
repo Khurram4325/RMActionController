@@ -808,7 +808,7 @@ typedef NS_ENUM(NSInteger, RMActionControllerAnimationStyle) {
             [containerView setNeedsUpdateConstraints];
             
             [UIView animateWithDuration:0.3 delay:0 options:UIViewAnimationOptionBeginFromCurrentState animations:^{
-                actionController.backgroundView.alpha = 0;
+                actionController.backgroundView.alpha = 1.0;
                 
                 [containerView layoutIfNeeded];
             } completion:^(BOOL finished) {
