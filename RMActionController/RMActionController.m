@@ -123,6 +123,7 @@ typedef NS_ENUM(NSInteger, RMActionControllerAnimationStyle) {
 @implementation RMActionController
 
 @synthesize disableMotionEffects = _disableMotionEffects;
+@synthesize enableBottomSafeArea = _enableBottomSafeArea;
 
 #pragma mark - Class
 + (nullable instancetype)actionControllerWithStyle:(RMActionControllerStyle)style {
@@ -420,7 +421,11 @@ typedef NS_ENUM(NSInteger, RMActionControllerAnimationStyle) {
     NSInteger bottomMargin = 0;
     id bottomItem;
     if (@available(iOS 11, *)) {
-        bottomItem = self.view.safeAreaLayoutGuide;
+        if (_enableBottomSafeArea) {
+            bottomItem = self.view.safeAreaLayoutGuide;
+        } else {
+            bottomItem = self.view;
+        }
     } else {
         bottomItem = self.view;
     }
