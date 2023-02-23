@@ -132,6 +132,11 @@ typedef NS_ENUM(NSInteger, RMActionControllerStyle) {
  */
 @property (nonatomic, assign) BOOL removeCornerRadius;
 
+/**
+ *  When YES removes corner radius. Default value is NO.
+ */
+@property (nonatomic, assign) BOOL enableBottomSafeArea;
+
 
 /// @name Actions
 #pragma mark - Actions
@@ -301,4 +306,3 @@ typedef NS_ENUM(NSInteger, RMActionStyle) {
 @property (nonnull, nonatomic, strong, readonly) NSArray<RMAction<T> *> *actions;
 
 @end
-
