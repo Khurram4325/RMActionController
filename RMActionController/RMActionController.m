@@ -124,7 +124,6 @@ typedef NS_ENUM(NSInteger, RMActionControllerAnimationStyle) {
 
 @synthesize disableMotionEffects = _disableMotionEffects;
 @synthesize enableBottomSafeArea = _enableBottomSafeArea;
-@synthesize topContainerCornerRadius = _topContainerCornerRadius;
 
 #pragma mark - Class
 + (nullable instancetype)actionControllerWithStyle:(RMActionControllerStyle)style {
@@ -346,7 +345,7 @@ typedef NS_ENUM(NSInteger, RMActionControllerAnimationStyle) {
     if (self.removeCornerRadius) {
         self.topContainer.layer.cornerRadius = 0;
     } else {
-        self.topContainer.layer.cornerRadius = _topContainerCornerRadius;
+        self.topContainer.layer.cornerRadius = 16.0;
     }
     
     self.topContainer.clipsToBounds = YES;
