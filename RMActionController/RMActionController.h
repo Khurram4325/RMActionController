@@ -132,12 +132,6 @@ typedef NS_ENUM(NSInteger, RMActionControllerStyle) {
  */
 @property (nonatomic, assign) BOOL removeCornerRadius;
 
-
-/**
- *  To apply top right, left corner radius
- */
-@property (nonatomic, assign) CGFloat topContainerCornerRadius;
-
 /**
  *  When YES then Bottom Constraints will be according to UIView else UIView SafeAreaLayoutGuide. Default value is NO.
  */
